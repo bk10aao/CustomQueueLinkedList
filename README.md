@@ -1,5 +1,5 @@
-# CustomQueueLinkedList
-Implementation of a queue using a singly linked list.
+# Queue
+Implementation of a Queue using own implementation of LinkedList.
 # Methods
 1. `add(T item)` - add item to end of queue, returns true if successful else false. Throws IllegalStateException on full queue and NullPointerException on null item.
 2. `T element()` - retrieve but not remove head of queue. Throws NoSuchElementException on empty Queue.
