@@ -11,7 +11,7 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
     public CustomQueueLinkedList() {
     }
 
-    public CustomQueueLinkedList(int capacity) {
+    public CustomQueueLinkedList(final int capacity) {
         this.capacity = capacity;
     }
 
@@ -38,7 +38,7 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
         return peek();
     }
 
-    public boolean offer(T item) {
+    public boolean offer(final T item) {
         if(item == null)
             throw new NullPointerException("Null item not supported");
         try {
