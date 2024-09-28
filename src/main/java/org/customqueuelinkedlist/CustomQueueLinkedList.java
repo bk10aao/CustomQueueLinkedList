@@ -77,6 +77,17 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
         return size;
     }
 
+    @Override
+    public String toString() {
+        if(size == 0)
+            return "{ }";
+        StringBuilder stringBuilder = new StringBuilder("{ ");
+        int index = 0;
+        for (Node x = head; x != null; x = x.nextNode, index++)
+            stringBuilder.append(x.data).append(", ");
+        return stringBuilder.replace(stringBuilder.lastIndexOf(", "), stringBuilder.length(), " }").toString();
+    }
+
     private class Node {
 
         private final T data;
