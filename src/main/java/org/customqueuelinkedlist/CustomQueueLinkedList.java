@@ -8,8 +8,7 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
     private int size = 0;
     private int capacity = 11;
 
-    public CustomQueueLinkedList() {
-    }
+    public CustomQueueLinkedList() { }
 
     public CustomQueueLinkedList(final int capacity) {
         this.capacity = capacity;

@@ -160,15 +160,15 @@ class CustomQueueLinkedListTest {
     }
 
     @Test
+    public void givenEmptyQueue_returnsEmptyCurlyBrackets_on_toString() {
+        CustomQueueLinkedList<Integer> customQueueLinkedList = new CustomQueueLinkedList<>();
+        assertEquals("{ }", customQueueLinkedList.toString());
+    }
+
+    @Test
     public void givenQueueOfValue_0_1_2_3_4_returnsCorrectString_on_toString() {
         CustomQueueLinkedList<Integer> customQueueLinkedList = new CustomQueueLinkedList<>();
         IntStream.range(0, 5).mapToObj(customQueueLinkedList::offer).forEach(Assertions::assertTrue);
         assertEquals("{ 0, 1, 2, 3, 4 }", customQueueLinkedList.toString());
-    }
-
-    @Test
-    public void givenEmptyQueue_returnsEmptyCurlyBrackets_on_toString() {
-        CustomQueueLinkedList<Integer> customQueueLinkedList = new CustomQueueLinkedList<>();
-        assertEquals("{ }", customQueueLinkedList.toString());
     }
 }

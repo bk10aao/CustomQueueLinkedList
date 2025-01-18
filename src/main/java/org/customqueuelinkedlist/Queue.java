@@ -10,30 +10,30 @@ public interface Queue<T> {
     /**
      * Add item to end of queue
      * @param item to be added to queue
-     * @return boolean true if added else false
      * @throws NullPointerException on null item
+     * @return boolean true if added else false
      */
     boolean add(T item);
 
     /**
      * Retrieve but not remove head of queue
-     * @return element at head of queue
      * @throws NoSuchElementException empty queue
+     * @return element at head of queue
      */
     T element();
 
     /**
      * Offer item to end of queue
      * @param item to be added to queue
-     * @return boolean true if added else false
      * @throws NullPointerException on null item
+     * @return boolean true if added else false
      */
     boolean offer(T item);
 
     /**
      * Retrieves, but does not remove, the head of this queue
-     * @return item at head of queue
      * @throws NoSuchElementException on empty queue
+     * @return item at head of queue
      */
     T peek();
 
@@ -45,8 +45,8 @@ public interface Queue<T> {
 
     /**
      * Remove item from front of queue
-     * @return T item returned
      * @throws NullPointerException on null item
+     * @return T item returned
      */
     T remove();
 
