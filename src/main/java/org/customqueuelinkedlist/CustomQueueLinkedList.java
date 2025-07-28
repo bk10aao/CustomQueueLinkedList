@@ -2,7 +2,7 @@ package org.customqueuelinkedlist;
 
 import java.util.NoSuchElementException;
 
-public class CustomQueueLinkedList<T> implements Queue<T> {
+public class CustomQueueLinkedList<E> implements Queue<E> {
     private Node head;
 
     private int size = 0;
@@ -14,7 +14,7 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
         this.capacity = capacity;
     }
 
-    public boolean add(final T item){
+    public boolean add(final E item){
         if(size == capacity)
             throw new IllegalStateException("Capacity reached");
         if(item == null)
@@ -31,13 +31,13 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
         return true;
     }
 
-    public T element() {
+    public E element() {
         if(size == 0)
             throw new NoSuchElementException("Empty Queue");
         return peek();
     }
 
-    public boolean offer(final T item) {
+    public boolean offer(final E item) {
         if(item == null)
             throw new NullPointerException("Null item not supported");
         try {
@@ -48,25 +48,25 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
         return true;
     }
 
-    public T peek() {
+    public E peek() {
         if(size == 0)
             throw new NoSuchElementException("Empty Queue");
         return head.data;
     }
 
-    public T poll() {
+    public E poll() {
         if(size == 0)
             return null;
-        T headValue = head.data;
+        E headValue = head.data;
         head = head.nextNode;
         size--;
         return headValue;
     }
 
-    public T remove() {
+    public E remove() {
         if(size == 0)
             throw new NoSuchElementException("Empty Queue");
-        T headValue = head.data;
+        E headValue = head.data;
         head = head.nextNode;
         size--;
         return headValue;
@@ -89,10 +89,10 @@ public class CustomQueueLinkedList<T> implements Queue<T> {
 
     private class Node {
 
-        private final T data;
+        private final E data;
         private Node nextNode;
 
-        public Node(T data) {
+        public Node(E data) {
             this.data = data;
         }
     }
